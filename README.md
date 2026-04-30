@@ -7,7 +7,7 @@
 **From GitHub:**
 
 ```bash
-specify extension add acps --from https://github.com/danielvm/acps-workflow
+specify extension add acps --from https://github.com/danielvm-ciandt/acps-workflow
 ```
 
 **Local development (path to this repo):**
