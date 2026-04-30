@@ -11,8 +11,9 @@ Install the extension with **one** of the methods below, then copy `config/acps-
 Each [tagged release](https://github.com/danielvm-ciandt/acps-workflow/releases) publishes a ready-made ZIP:
 
 ```bash
+# Replace <version> with the desired release (e.g. 1.0.0)
 specify extension add acps \
-  --from https://github.com/danielvm-ciandt/acps-workflow/releases/latest/download/acps-workflow-1.0.0.zip
+  --from https://github.com/danielvm-ciandt/acps-workflow/releases/download/v<version>/acps-workflow-<version>.zip
 ```
 
 ### GitHub source (latest main)
@@ -151,7 +152,7 @@ See `memory/acps-methodology.md` for folder layout (including `.specify/counting
 
 Releases are automated via GitHub Actions. To publish a new version:
 
-1. Bump `version` in **both** `extension.yml` and `package.json`.
+1. Bump `version` in `extension.yml`.
 2. Tag and push:
 
 ```bash
@@ -159,10 +160,7 @@ git tag v1.1.0
 git push origin main --tags
 ```
 
-The workflow creates a GitHub Release with a ZIP artifact and publishes to npm.
-
-> **Setup:** Add an `NPM_TOKEN` secret to the repo (Settings → Secrets → Actions).
-> Generate one at [npmjs.com/settings/tokens](https://www.npmjs.com/settings/tokens) using the **Automation** type.
+The workflow creates a GitHub Release with a ZIP artifact.
 
 ## License
 
