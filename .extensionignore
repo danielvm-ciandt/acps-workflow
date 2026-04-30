@@ -1,0 +1,6 @@
+.github/
+.git/
+.gitignore
+tests/
+docs/
+CONTRIBUTING.md

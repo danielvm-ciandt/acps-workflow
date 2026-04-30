@@ -1,0 +1,23 @@
+# ACPS Workflow Configuration
+# Copy to acps-config.yml and customize for your project.
+
+project:
+  name: ""
+  team: ""
+
+artifacts:
+  backlog_path: "BACKLOG.md"
+  release_plan_path: "RELEASE_PLAN.md"
+  changelog_path: "CHANGELOG.md"
+  test_summary_path: "TEST_SUMMARY.md"
+
+quality_gates:
+  require_test_before_uat: true
+  require_uat_before_docs: true
+  require_scope_review: false
+
+counting:
+  default_mode: "full"          # full | simplified | fp-snap
+  maturity_threshold_bcp: 20    # BCP total for 100% maturity score
+  maturity_threshold_fp: 50     # FP+SNAP total for 100% maturity score
+  auto_count_after_specify: true
