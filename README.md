@@ -6,13 +6,7 @@
 
 Install the extension with **one** of the methods below, then copy `config/acps-config.template.yml` to `acps-config.yml` in your project (or rely on defaults).
 
-### npm (recommended)
-
-```bash
-specify extension add acps --from npm:acps-workflow
-```
-
-### GitHub Release
+### GitHub Release (recommended)
 
 Each [tagged release](https://github.com/danielvm-ciandt/acps-workflow/releases) publishes a ready-made ZIP:
 
