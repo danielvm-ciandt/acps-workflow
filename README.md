@@ -4,31 +4,46 @@
 
 ## Installation
 
-**From npm (recommended):**
+Install the extension with **one** of the methods below, then copy `config/acps-config.template.yml` to `acps-config.yml` in your project (or rely on defaults).
+
+### npm (recommended)
 
 ```bash
 specify extension add acps --from npm:acps-workflow
 ```
 
-**From GitHub Release:**
+### GitHub Release
+
+Each [tagged release](https://github.com/danielvm-ciandt/acps-workflow/releases) publishes a ready-made ZIP:
 
 ```bash
-specify extension add acps --from https://github.com/danielvm-ciandt/acps-workflow/releases/latest/download/acps-workflow-1.0.0.zip
+specify extension add acps \
+  --from https://github.com/danielvm-ciandt/acps-workflow/releases/latest/download/acps-workflow-1.0.0.zip
 ```
 
-**From GitHub source:**
+### GitHub source (latest main)
 
 ```bash
-specify extension add acps --from https://github.com/danielvm-ciandt/acps-workflow/archive/refs/heads/main.zip
+specify extension add acps \
+  --from https://github.com/danielvm-ciandt/acps-workflow/archive/refs/heads/main.zip
 ```
 
-**Local development (path to this repo):**
+### Local development
 
 ```bash
 specify extension add --dev /path/to/acps-workflow
 ```
 
-On first use, copy `config/acps-config.template.yml` to `acps-config.yml` in your project (or rely on defaults where supported).
+### Troubleshooting
+
+If you see `[SSL: CERTIFICATE_VERIFY_FAILED]` on macOS, your Python installation is missing root certificates. Fix it with:
+
+```bash
+# Replace 3.x with your Python version (e.g. 3.12, 3.14)
+/Applications/Python\ 3.x/Install\ Certificates.command
+```
+
+Or, if using pip-installed Python: `pip3 install --upgrade certifi`.
 
 ## Commands
 
@@ -137,6 +152,23 @@ See `memory/acps-methodology.md` for folder layout (including `.specify/counting
 - **`memory/acps-methodology.md`** — Command namespaces, trunk order, folders, CR/release policies.
 - **`memory/acps-states.md`** — State IDs, commands, and gateway transitions.
 - **`memory/bcp-rubric.md`** — Quick BCP scoring reference.
+
+## Publishing (maintainers)
+
+Releases are automated via GitHub Actions. To publish a new version:
+
+1. Bump `version` in **both** `extension.yml` and `package.json`.
+2. Tag and push:
+
+```bash
+git tag v1.1.0
+git push origin main --tags
+```
+
+The workflow creates a GitHub Release with a ZIP artifact and publishes to npm.
+
+> **Setup:** Add an `NPM_TOKEN` secret to the repo (Settings → Secrets → Actions).
+> Generate one at [npmjs.com/settings/tokens](https://www.npmjs.com/settings/tokens) using the **Automation** type.
 
 ## License
 
