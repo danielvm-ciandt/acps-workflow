@@ -4,10 +4,22 @@
 
 ## Installation
 
-**From GitHub:**
+**From npm (recommended):**
 
 ```bash
-specify extension add acps --from https://github.com/danielvm-ciandt/acps-workflow
+specify extension add acps --from npm:acps-workflow
+```
+
+**From GitHub Release:**
+
+```bash
+specify extension add acps --from https://github.com/danielvm-ciandt/acps-workflow/releases/latest/download/acps-workflow-1.0.0.zip
+```
+
+**From GitHub source:**
+
+```bash
+specify extension add acps --from https://github.com/danielvm-ciandt/acps-workflow/archive/refs/heads/main.zip
 ```
 
 **Local development (path to this repo):**

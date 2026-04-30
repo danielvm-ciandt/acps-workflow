@@ -1,0 +1,26 @@
+{
+  "name": "acps-workflow",
+  "version": "1.0.0",
+  "description": "CI&T Production System workflow extension for Spec Kit — epic backlog cycling, release planning, quality gates, scope counting (BCP/FP/SNAP), and more",
+  "keywords": [
+    "speckit",
+    "specify",
+    "acps",
+    "workflow",
+    "bcp",
+    "function-points",
+    "scope-counting",
+    "quality-gates",
+    "release-planning"
+  ],
+  "author": "danielvm",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielvm-ciandt/acps-workflow.git"
+  },
+  "homepage": "https://github.com/danielvm-ciandt/acps-workflow#readme",
+  "bugs": {
+    "url": "https://github.com/danielvm-ciandt/acps-workflow/issues"
+  }
+}

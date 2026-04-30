@@ -6,7 +6,7 @@ extension:
   version: "1.0.0"
   description: "CI&T Production System workflow with epic-backlog cycling, release planning, quality gates, scope management, release lifecycle, and BCP/FP/SNAP scope counting"
   author: "danielvm"
-  repository: "https://github.com/danielvm/acps-workflow"
+  repository: "https://github.com/danielvm-ciandt/acps-workflow"
   license: "MIT"
 
 requires:
