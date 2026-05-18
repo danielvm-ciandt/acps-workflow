@@ -2,7 +2,7 @@
 
 **T-shirt scale (all dimensions):** XS = **1**, S = **2**, M = **3**, L = **5**, XL = **8** points.
 
-Use this with **`speckit.acps.count`** (full / simplified / fp-snap modes). Only count what the **spec explicitly states**; prefer the **simplest** defensible size when ambiguous.
+Use this with **`acps.spec`** (auto-count after spec, or `acps.spec --count-only` to recount; modes: full / simplified / fp-snap). Only count what the **spec explicitly states**; prefer the **simplest** defensible size when ambiguous.
 
 ---
 
